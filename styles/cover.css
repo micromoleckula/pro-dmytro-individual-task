@@ -1,0 +1,45 @@
+.cover {
+  background-image: url(../img/cover/background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.cover__title {
+  max-width: 710px;
+  font-weight: 700;
+  font-size: 74px;
+  margin: 270px 0 20px 0;
+  color: #ffffff;
+  text-align: center;
+}
+
+.cover__subtitle {
+  max-width: 800px;
+  color: #ffffff;
+  font-weight: 200;
+  font-size: 28px;
+  text-align: center;
+}
+
+.cover__button {
+  margin: 100px 0 300px 0;
+  padding: 15px 60px;
+  border-radius: 35px;
+  background-color: #2091F9;
+  color: #ffffff;
+  border-style: none;
+  font-weight: 400;
+  font-size: 20px;
+  align-items: center;
+  text-decoration: none;
+}
+
+.cover__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Занимает всю высоту экрана */
+}

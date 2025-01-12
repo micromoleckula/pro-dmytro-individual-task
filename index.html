@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Figmaland</title>
   </head>
   <body>
@@ -23,13 +24,30 @@
         <div>
           <ul class="header__social">
             <li class="header__social-element">
-              <img src="img/global/design_twitter.png" alt="logo-twitter" />
+              <a href="https://x.com/" rel="noopener noreferrer nofollow"
+                ><img
+                  class="header__social-img"
+                  src="img/global/design_twitter.png"
+                  alt="logo-twitter"
+              /></a>
             </li>
             <li class="header__social-element">
-              <img src="img/global/design_facebook.png" alt="logo-facebook" />
+              <a href="https://facebook.com/" rel="noopener noreferrer nofollow"
+                ><img
+                  class="header__social-img"
+                  src="img/global/design_facebook.png"
+                  alt="logo-facebook"
+              /></a>
             </li>
             <li class="header__social-element">
-              <img src="img/global/design_linkedin.png" alt="logo-linkedin" />
+              <a
+                href="https://www.linkedin.com/in/dmitryprokop/"
+                rel="noopener noreferrer nofollow"
+                ><img
+                  class="header__social-img"
+                  src="img/global/design_linkedin.png"
+                  alt="logo-linkedin"
+              /></a>
             </li>
           </ul>
         </div>
@@ -38,12 +56,14 @@
     <main>
       <!-- cover section -->
       <section class="cover">
-        <h1 class="cover__title">The best products start with Figma</h1>
-        <p class="cover__subtitle">
-          Most calendars are designed for teams. Slate is designed for
-          freelancers
-        </p>
-        <button class="cover__button">Try For Free</button>
+        <div class="cover__text">
+          <h1 class="cover__title">The best products start with Figma</h1>
+          <p class="cover__subtitle">
+            Most calendars are designed for teams. Slate is designed for
+            freelancers
+          </p>
+          <a class="cover__button" href="#">Try For Free</a>
+        </div>
       </section>
 
       <!-- features section -->
@@ -54,7 +74,7 @@
           freelancers
         </p>
         <div class="features__cards">
-          <card class="features__card">
+          <article class="features__card">
             <img
               class="features__card-img"
               src="img/features/drawing.png"
@@ -67,9 +87,9 @@
               Slate helps you see how many more days you need to work to reach
               your financial goal.
             </p>
-          </card>
+          </article>
 
-          <card class="features__card">
+          <article class="features__card">
             <img
               class="features__card-img"
               src="img/features/draw.png"
@@ -80,9 +100,9 @@
               Slate helps you see how many more days you need to work to reach
               your financial goal.
             </p>
-          </card>
+          </article>
 
-          <card class="features__card">
+          <article class="features__card">
             <img
               class="features__card-img"
               src="img/features/brush.png"
@@ -93,7 +113,7 @@
               Slate helps you see how many more days you need to work to reach
               your financial goal.
             </p>
-          </card>
+          </article>
 
           <img
             class="features__video"
@@ -257,7 +277,7 @@
 
         <div class="pricing__cards">
           <!--card 1-->
-          <card class="pricing__card">
+          <article class="pricing__card">
             <div class="pricing__card-text">
               <!--text top-->
               <h3 class="pricing__card-title">Free</h3>
@@ -281,10 +301,10 @@
               <p class="pricing__card-features-text">Pricing Feature</p>
             </div>
             <button class="pricing__card-button">Order Now</button>
-          </card>
+          </article>
 
           <!--card 2-->
-          <div class="pricing__card">
+          <article class="pricing__card">
             <div class="pricing__card-text">
               <!--text top-->
               <h3 class="pricing__card-title">Standart</h3>
@@ -308,10 +328,10 @@
               <p class="pricing__card-features-text">Pricing Feature</p>
             </div>
             <button class="pricing__card-button">Order Now</button>
-          </div>
+          </article>
 
           <!--card 3-->
-          <div class="pricing__card">
+          <article class="pricing__card">
             <div class="pricing__card-text">
               <!--text top-->
               <h3 class="pricing__card-title">BUSINESS</h3>
@@ -335,7 +355,7 @@
               <p class="pricing__card-features-text">Pricing Feature</p>
             </div>
             <button class="pricing__card-button">Order Now</button>
-          </div>
+          </article>
         </div>
       </section>
 
@@ -371,9 +391,9 @@
             <button class="contact__form-button">Send</button>
           </div>
           <!--right-->
-          <address class="contact__info">
+          <div class="contact__info">
             <!--Adress phone mail-->
-            <div class="contact__info-box">
+            <address class="contact__info-box">
               <img
                 class="contact__info-img"
                 src="img/contact/bx-map.png"
@@ -382,7 +402,7 @@
               <p class="contact__info-text">
                 6386 Spring St undefined Anchorage, Georgia 12473 United States
               </p>
-            </div>
+            </address>
             <div class="contact__info-communication">
               <img
                 class="contact__info-img"
@@ -405,7 +425,7 @@
                 >willie.jennings@example.com</a
               >
             </div>
-          </address>
+          </div>
           <img
             class="contact__map"
             src="img/contact/map-screen.png"
@@ -447,31 +467,31 @@
         <nav class="footer__nav">
           <h3 class="footer__nav-title">Pages</h3>
           <ul class="footer__nav-menu">
-            <a class="footer__nav-element" href="#"><li>Home</li></a>
-            <a class="footer__nav-element" href="#"><li>Product</li></a>
-            <a class="footer__nav-element" href="#"><li>Pricing</li></a>
-            <a class="footer__nav-element" href="#"><li>About</li></a>
-            <a class="footer__nav-element" href="#"><li>Contact</li></a>
+            <li><a class="footer__nav-element" href="#">Home</a></li>
+            <li><a class="footer__nav-element" href="#">Product</a></li>
+            <li><a class="footer__nav-element" href="#">Pricing</a></li>
+            <li><a class="footer__nav-element" href="#">About</a></li>
+            <li><a class="footer__nav-element" href="#">Contact</a></li>
           </ul>
         </nav>
         <nav class="footer__nav">
           <h3 class="footer__nav-title">Tomothy</h3>
           <ul class="footer__nav-menu">
-            <a class="footer__nav-element" href="#"><li>Eleanor Edwards</li></a>
-            <a class="footer__nav-element" href="#"><li>Ted Robertson</li></a>
-            <a class="footer__nav-element" href="#"><li>Annette Russell</li></a>
-            <a class="footer__nav-element" href="#"><li>Jennie Mckinney</li></a>
-            <a class="footer__nav-element" href="#"><li>Gloria Prokop</li></a>
+            <li><a class="footer__nav-element" href="#">Eleanor Edwards</a></li>
+            <li><a class="footer__nav-element" href="#">Ted Robertson</a></li>
+            <li><a class="footer__nav-element" href="#">Annette Russell</a></li>
+            <li><a class="footer__nav-element" href="#">Jennie Mckinney</a></li>
+            <li><a class="footer__nav-element" href="#">Gloria Prokop</a></li>
           </ul>
         </nav>
         <nav class="footer__nav">
           <h3 class="footer__nav-title">Jane Black</h3>
           <ul class="footer__nav-menu">
-            <a class="footer__nav-element" href="#"><li>Philip Jones</li></a>
-            <a class="footer__nav-element" href="#"><li>Product</li></a>
-            <a class="footer__nav-element" href="#"><li>Colleen Russell</li></a>
-            <a class="footer__nav-element" href="#"><li>Marvin Hawkins</li></a>
-            <a class="footer__nav-element" href="#"><li>Dmitry Simmmons</li></a>
+            <li><a class="footer__nav-element" href="#">Philip Jones</a></li>
+            <li><a class="footer__nav-element" href="#">Product</a></li>
+            <li><a class="footer__nav-element" href="#">Colleen Russell</a></li>
+            <li><a class="footer__nav-element" href="#">Marvin Hawkins</a></li>
+            <li><a class="footer__nav-element" href="#">Dmitry Simmmons</a></li>
           </ul>
         </nav>
       </div>
@@ -501,25 +521,26 @@
         <!--social-->
         <ul class="footer__social">
           <li class="footer__social-element">
-            <img
+            <a href="https://x.com/"><img
               class="footer__social-img"
               src="img/global/design_twitter.png"
               alt="logo-twitter"
-            />
+            /></a>
           </li>
           <li class="footer__social-element">
-            <img
+            <a href="https://facebook.com/"><img
               class="footer__social-img"
               src="img/global/design_facebook.png"
               alt="logo-facebook"
-            />
+            /></a>
+            
           </li>
           <li class="footer__social-element">
-            <img
+            <a href="https://www.linkedin.com/in/dmitryprokop/"><img
               class="footer__social-img"
               src="img/global/design_linkedin.png"
               alt="logo-linkedin"
-            />
+            /></a>
           </li>
         </ul>
       </div>
