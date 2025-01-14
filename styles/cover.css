@@ -41,5 +41,5 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Занимает всю высоту экрана */
+  height: 100vh;
 }
