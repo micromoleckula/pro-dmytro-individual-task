@@ -9,20 +9,53 @@
   <body>
     <header class="header">
       <nav class="header__nav">
-        <div class="header">
-          <nav class="header__nav">
-            <div class="header__burger" id="burger">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <ul class="header__list" id="menu">
-              <li class="header__list-element"><a href="#">Home</a></li>
-              <li class="header__list-element"><a href="#">About</a></li>
-              <li class="header__list-element"><a href="#">Services</a></li>
-              <li class="header__list-element"><a href="#">Contact</a></li>
-            </ul>
-          </nav>
+        <div class="header__nav-burger" id="menu">
+          <div class="header__burger-close" id="burger-close">
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="header__list-burger">
+            <li class="header__list-element-burger"><a href="#">Home</a></li>
+            <li class="header__list-element-burger"><a href="#">About</a></li>
+            <li class="header__list-element-burger"><a href="#">Pricing</a></li>
+            <li class="header__list-element-burger"><a href="#">Services</a></li>
+            <li class="header__list-element-burger"><a href="#">Contact</a></li>
+          </ul>
+          <ul class="header__social-burger">
+            <li class="header__social-element">
+              <a href="https://x.com/" rel="noopener noreferrer nofollow">
+                <img
+                  class="header__social-img"
+                  src="img/global/design_twitter.png"
+                  alt="logo-twitter"
+                />
+              </a>
+            </li>
+            <li class="header__social-element">
+              <a
+                href="https://facebook.com/"
+                rel="noopener noreferrer nofollow"
+              >
+                <img
+                  class="header__social-img"
+                  src="img/global/design_facebook.png"
+                  alt="logo-facebook"
+                />
+              </a>
+            </li>
+            <li class="header__social-element">
+              <a
+                href="https://www.linkedin.com/in/dmitryprokop/"
+                rel="noopener noreferrer nofollow"
+              >
+                <img
+                  class="header__social-img"
+                  src="img/global/design_linkedin.png"
+                  alt="logo-linkedin"
+                />
+              </a>
+            </li>
+          </ul>
         </div>
         <ul class="header__list">
           <li class="header__list-element"><a href="#">Home</a></li>
@@ -36,40 +69,54 @@
           src="img/header/figmaland_logo.png"
           alt="figmaland logo"
         />
-        <div>
+        
+        <div class="header__social-box">
           <ul class="header__social">
             <li class="header__social-element">
-              <a href="https://x.com/" rel="noopener noreferrer nofollow"
-                ><img
+              <a href="https://x.com/" rel="noopener noreferrer nofollow">
+                <img
                   class="header__social-img"
                   src="img/global/design_twitter.png"
                   alt="logo-twitter"
-              /></a>
+                />
+              </a>
             </li>
             <li class="header__social-element">
-              <a href="https://facebook.com/" rel="noopener noreferrer nofollow"
-                ><img
+              <a
+                href="https://facebook.com/"
+                rel="noopener noreferrer nofollow"
+              >
+                <img
                   class="header__social-img"
                   src="img/global/design_facebook.png"
                   alt="logo-facebook"
-              /></a>
+                />
+              </a>
             </li>
             <li class="header__social-element">
               <a
                 href="https://www.linkedin.com/in/dmitryprokop/"
                 rel="noopener noreferrer nofollow"
-                ><img
+              >
+                <img
                   class="header__social-img"
                   src="img/global/design_linkedin.png"
                   alt="logo-linkedin"
-              /></a>
+                />
+              </a>
             </li>
           </ul>
+        </div>
+        
+        <div class="header__burger" id="burger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </nav>
     </header>
     <main>
-      <!-- cover section -->
+
       <section class="cover">
         <div class="cover__text">
           <h1 class="cover__title">The best products start with Figma</h1>
@@ -81,7 +128,6 @@
         </div>
       </section>
 
-      <!-- features section -->
       <section class="features">
         <h2 class="features__title">Features</h2>
         <p class="features__subtitle">
@@ -138,7 +184,6 @@
         </div>
       </section>
 
-      <!-- hero light section -->
       <section class="hero-light">
         <div class="hero-light__box">
           <h2 class="hero-light__title">Fastest way to organize</h2>
@@ -155,7 +200,6 @@
         />
       </section>
 
-      <!-- light CTA section -->
       <section class="light-cta">
         <img
           class="light-cta__img"
@@ -178,7 +222,6 @@
         </div>
       </section>
 
-      <!-- partners section -->
       <section class="partners">
         <div class="partners__text">
           <h2>Partners</h2>
@@ -256,8 +299,6 @@
         <button class="partners__button">Try For Free</button>
       </section>
 
-      <!-- testimonials section -->
-
       <section class="testimonials">
         <h2 class="testimonials__title">Testimonials</h2>
         <div class="testimonials__box">
@@ -278,8 +319,6 @@
           <button class="testimonials__button">More Testimonials</button>
         </div>
       </section>
-
-      <!-- pricing section -->
 
       <section class="pricing">
         <div class="pricing__text">
@@ -363,8 +402,6 @@
           </article>
         </div>
       </section>
-
-      <!-- contact us section -->
 
       <section class="contact">
         <div class="contact__text">
@@ -461,7 +498,7 @@
         </div>
       </section>
     </main>
-    <!--footer-->
+
     <footer class="footer">
       <div class="footer__nav">
         <nav class="footer__nav">
@@ -518,25 +555,27 @@
         </div>
         <ul class="footer__social">
           <li class="footer__social-element">
-            <a href="https://x.com/"><img
-              class="footer__social-img"
-              src="img/global/design_twitter.png"
-              alt="logo-twitter"
+            <a href="https://x.com/"
+              ><img
+                class="footer__social-img"
+                src="img/global/design_twitter.png"
+                alt="logo-twitter"
             /></a>
           </li>
           <li class="footer__social-element">
-            <a href="https://facebook.com/"><img
-              class="footer__social-img"
-              src="img/global/design_facebook.png"
-              alt="logo-facebook"
+            <a href="https://facebook.com/"
+              ><img
+                class="footer__social-img"
+                src="img/global/design_facebook.png"
+                alt="logo-facebook"
             /></a>
-            
           </li>
           <li class="footer__social-element">
-            <a href="https://www.linkedin.com/in/dmitryprokop/"><img
-              class="footer__social-img"
-              src="img/global/design_linkedin.png"
-              alt="logo-linkedin"
+            <a href="https://www.linkedin.com/in/dmitryprokop/"
+              ><img
+                class="footer__social-img"
+                src="img/global/design_linkedin.png"
+                alt="logo-linkedin"
             /></a>
           </li>
         </ul>

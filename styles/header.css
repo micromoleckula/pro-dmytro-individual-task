@@ -1,3 +1,26 @@
+.header {
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  height: 100px;
+  transition: background-color 0.3s ease;              /* Исходный фон */
+}
+
+/* Класс, указывающий на то, что хедер проскроллен */
+.header.scrolled {
+  background-color: rgba(51, 51, 51, 0.6); /* Полупрозрачность */
+}
+
+.header__nav {
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  height: 100px;
+  justify-content: space-between;
+}
+
 .header__burger {
   display: flex;
   flex-direction: column;
@@ -7,83 +30,82 @@
   cursor: pointer;
 }
 
+.header__burger.hidden {
+  display: none;
+}
+
+.header__burger-close {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.header__burger-close span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--main-color);
+  transition: transform 0.3s ease;
+}
+
+.header__burger-close.active {
+  display: block;
+}
+
+.header__burger-close span:first-child {
+  transform: rotate(45deg);
+}
+
+.header__burger-close span:last-child {
+  transform: rotate(-45deg);
+}
+
+.header__list-burger {
+  list-style: none;
+}
+
 .header__burger span {
   width: 100%;
   height: 3px;
-  background-color: #ffffff;
+  background-color: var(--main-color);
+}
+
+.header__nav-burger {
+  position: fixed;            /* фиксируем позицию */
+  top: 0;
+  left: 0;
+  width: 100vw;              /* на всю ширину экрана */
+  height: 100vh;             /* на всю высоту экрана */
+  background-color: rgba(51, 51, 51, 0.5); /* полупрозрачный фон */
+  display: none;
+  flex-direction: column;
+  padding: 10px;
+  z-index: 5;              /* чтобы точно было поверх других элементов */
+}
+
+.header__nav-burger.active {
+  display: flex;
+}
+
+.header__list-element-burger a {
+  color: white;
+  text-decoration: none;
 }
 
 .header__list {
   display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 60px;
-  right: 10px;
-  background-color: #333;
-  padding: 10px;
-  border-radius: 5px;
 }
 
-.header__list-element {
-  margin: 10px 0;
-}
-
-.header__list-element a {
-  color: #ffffff;
-}
-
-.header__list.active {
-  display: flex;
-}
-
-/* burger end */
-
-.header {
-  position: absolute;
-  z-index: 3;
-  left: 0;
-  right: 0;
-  height: 160px;
-}
-
-.header__nav {
-  margin: 0 auto;
-  max-width: 1200px;
-  display: flex;
-  align-items: center;
-  padding: 0 10px;
-  height: 160px;
-}
-
-.header__list {
-  margin-right: auto;
+.header__social-burger {
   display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.header__list-element {
-  margin-right: 20px;
-  margin-left: 20px;
-}
-
-.header__list-element a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 300;
-  font-size: 15px;
-  transition: color 0.3s ease;
-}
-
-.header__list-element a:hover {
-  color: #aaaaaa;
-}
-
-.header__logo {
-  margin: 0 auto 0 50px;
-  width: 186px;
-  height: auto;
 }
 
 .header__social {
@@ -91,6 +113,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  display: none;
 }
 
 .header__social-element {
@@ -100,4 +123,59 @@
 .header__social-img {
   width: 32px;
   height: 32px;
+}
+
+@media screen and (min-width: 900px) {
+  .header__nav {
+    margin: 0 auto;
+  }
+
+  .header__nav-burger {
+    display: none;
+  }
+
+  .header__burger {
+    display: none;
+  }
+
+  .header__social {
+    display: flex;
+  }
+
+  .header__list {
+    margin-right: auto;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .header__list-element {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .header__list {
+    display: flex;
+  }
+
+  .header__list-element {
+    margin: 10px 0;
+  }
+
+  .header__list-element a {
+    color: var(--main-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .header__list-element a:hover {
+    color: #aaaaaa;
+  }
+
+  .header__logo {
+    margin: 0 auto 0 50px;
+    width: 186px;
+    height: auto;
+  }
 }
