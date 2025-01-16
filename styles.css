@@ -9,6 +9,7 @@
 @import url("styles/pricing.css");
 @import url("styles/contact-us.css");
 @import url("styles/footer.css");
+@import url("styles/features.css");
 
 *,
 *::after,
@@ -21,5 +22,12 @@
 :root {
   scroll-behavior: smooth;
   font-family: Montserrat;
-  --main-color: #ffffff;  
+  --main-color: #ffffff;
+  --hover-color: #aaaaaa;
+  --bg-header-scroll: rgba(32, 32, 32, 0.767);
+  --header-nav-burger-bg: rgba(51, 51, 51, 0.5);
+  --cover-bg: url(../img/cover/background.png);
+  --bg-button: #2091F9;
+  --title-color: #252B42;
+  --second-text-color: #374754;
 }

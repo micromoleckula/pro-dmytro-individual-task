@@ -1,5 +1,5 @@
 .cover {
-  background-image: url(../img/cover/background.png);
+  background-image: var(--cover-bg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -9,17 +9,17 @@
 .cover__title {
   max-width: 710px;
   font-weight: 700;
-  font-size: 74px;
+  font-size: 50px;
   margin: 270px 0 20px 0;
-  color: #ffffff;
+  color: var(--main-color);
   text-align: center;
 }
 
 .cover__subtitle {
   max-width: 800px;
-  color: #ffffff;
+  color: var(--main-color);
   font-weight: 200;
-  font-size: 28px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -27,8 +27,8 @@
   margin: 100px 0 300px 0;
   padding: 15px 60px;
   border-radius: 35px;
-  background-color: #2091F9;
-  color: #ffffff;
+  background-color: var(--bg-button);
+  color: var(--main-color);
   border-style: none;
   font-weight: 400;
   font-size: 20px;
@@ -41,5 +41,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
+
+@media screen and (min-width: 900px) {
+  
+  .cover__title {
+    max-width: 710px;
+    font-size: 74px;
+    margin: 270px 0 20px 0;
+  }
+  
+  .cover__subtitle {
+    font-size: 28px;
+  }
+
+  .cover__button {
+    margin: 100px 0 300px 0;
+  }
+}
+

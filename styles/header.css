@@ -4,12 +4,11 @@
   left: 0;
   right: 0;
   height: 100px;
-  transition: background-color 0.3s ease;              /* Исходный фон */
+  transition: background-color 0.3s ease;
 }
 
-/* Класс, указывающий на то, что хедер проскроллен */
 .header.scrolled {
-  background-color: rgba(51, 51, 51, 0.6); /* Полупрозрачность */
+  background-color: var(--bg-header-scroll);
 }
 
 .header__nav {
@@ -65,8 +64,11 @@
   transform: rotate(-45deg);
 }
 
-.header__list-burger {
+.header__list-burger{
+  display: flex;
+  flex-direction: column;
   list-style: none;
+  align-items: center;
 }
 
 .header__burger span {
@@ -76,16 +78,16 @@
 }
 
 .header__nav-burger {
-  position: fixed;            /* фиксируем позицию */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;              /* на всю ширину экрана */
-  height: 100vh;             /* на всю высоту экрана */
-  background-color: rgba(51, 51, 51, 0.5); /* полупрозрачный фон */
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--header-nav-burger-bg);
   display: none;
   flex-direction: column;
   padding: 10px;
-  z-index: 5;              /* чтобы точно было поверх других элементов */
+  z-index: 5;
 }
 
 .header__nav-burger.active {
@@ -93,8 +95,13 @@
 }
 
 .header__list-element-burger a {
-  color: white;
+  color: var(--main-color);
   text-decoration: none;
+  font-size: 40px;
+}
+
+.header__list-element-burger {
+  margin: 20px 0;
 }
 
 .header__list {
@@ -103,9 +110,13 @@
 
 .header__social-burger {
   display: flex;
+  justify-content: center;
   list-style: none;
-  padding: 0;
-  margin: 0;
+}
+
+.header__social-burger img {
+  width: 50px;
+  height: 50px;
 }
 
 .header__social {
@@ -159,6 +170,10 @@
     display: flex;
   }
 
+  .header__list-element a{
+    margin-right: 40px;
+  }
+
   .header__list-element {
     margin: 10px 0;
   }
@@ -170,11 +185,11 @@
   }
 
   .header__list-element a:hover {
-    color: #aaaaaa;
+    color: var(--hover-color);
   }
 
   .header__logo {
-    margin: 0 auto 0 50px;
+    margin: 0 auto 0 25px;
     width: 186px;
     height: auto;
   }

@@ -10,15 +10,13 @@
     <header class="header">
       <nav class="header__nav">
         <div class="header__nav-burger" id="menu">
-          <div class="header__burger-close" id="burger-close">
-            <span></span>
-            <span></span>
-          </div>
           <ul class="header__list-burger">
             <li class="header__list-element-burger"><a href="#">Home</a></li>
             <li class="header__list-element-burger"><a href="#">About</a></li>
             <li class="header__list-element-burger"><a href="#">Pricing</a></li>
-            <li class="header__list-element-burger"><a href="#">Services</a></li>
+            <li class="header__list-element-burger">
+              <a href="#">Services</a>
+            </li>
             <li class="header__list-element-burger"><a href="#">Contact</a></li>
           </ul>
           <ul class="header__social-burger">
@@ -69,7 +67,7 @@
           src="img/header/figmaland_logo.png"
           alt="figmaland logo"
         />
-        
+
         <div class="header__social-box">
           <ul class="header__social">
             <li class="header__social-element">
@@ -107,16 +105,20 @@
             </li>
           </ul>
         </div>
-        
+
         <div class="header__burger" id="burger">
           <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="header__burger-close" id="burger-close">
           <span></span>
           <span></span>
         </div>
       </nav>
     </header>
     <main>
-
       <section class="cover">
         <div class="cover__text">
           <h1 class="cover__title">The best products start with Figma</h1>
@@ -129,11 +131,13 @@
       </section>
 
       <section class="features">
-        <h2 class="features__title">Features</h2>
-        <p class="features__subtitle">
-          Most calendars are designed for teams. Slate is designed for
-          freelancers
-        </p>
+        <div class="features__text">
+          <h2 class="features__title">Features</h2>
+          <p class="features__subtitle">
+            Most calendars are designed for teams. Slate is designed for
+            freelancers
+          </p>
+        </div>
         <div class="features__cards">
           <article class="features__card">
             <img
@@ -175,13 +179,12 @@
               your financial goal.
             </p>
           </article>
-
-          <img
-            class="features__video"
-            src="img/features/fake-video.png"
-            alt="video"
-          />
         </div>
+        <img
+          class="features__video"
+          src="img/features/fake-video.png"
+          alt="video"
+        />
       </section>
 
       <section class="hero-light">
